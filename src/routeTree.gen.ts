@@ -10,33 +10,74 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AktualnosciRouteImport } from './routes/aktualnosci'
+import { Route as HarmonogramRouteImport } from './routes/harmonogram'
+import { Route as ONasRouteImport } from './routes/o-nas'
+import { Route as TrenerzyRouteImport } from './routes/trenerzy'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AktualnosciRoute = AktualnosciRouteImport.update({
+  id: '/aktualnosci',
+  path: '/aktualnosci',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HarmonogramRoute = HarmonogramRouteImport.update({
+  id: '/harmonogram',
+  path: '/harmonogram',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ONasRoute = ONasRouteImport.update({
+  id: '/o-nas',
+  path: '/o-nas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrenerzyRoute = TrenerzyRouteImport.update({
+  id: '/trenerzy',
+  path: '/trenerzy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aktualnosci': typeof AktualnosciRoute
+  '/harmonogram': typeof HarmonogramRoute
+  '/o-nas': typeof ONasRoute
+  '/trenerzy': typeof TrenerzyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aktualnosci': typeof AktualnosciRoute
+  '/harmonogram': typeof HarmonogramRoute
+  '/o-nas': typeof ONasRoute
+  '/trenerzy': typeof TrenerzyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aktualnosci': typeof AktualnosciRoute
+  '/harmonogram': typeof HarmonogramRoute
+  '/o-nas': typeof ONasRoute
+  '/trenerzy': typeof TrenerzyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/aktualnosci' | '/harmonogram' | '/o-nas' | '/trenerzy'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/aktualnosci' | '/harmonogram' | '/o-nas' | '/trenerzy'
+  id:
+    '__root__' | '/' | '/aktualnosci' | '/harmonogram' | '/o-nas' | '/trenerzy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AktualnosciRoute: typeof AktualnosciRoute
+  HarmonogramRoute: typeof HarmonogramRoute
+  ONasRoute: typeof ONasRoute
+  TrenerzyRoute: typeof TrenerzyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +89,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aktualnosci': {
+      id: '/aktualnosci'
+      path: '/aktualnosci'
+      fullPath: '/aktualnosci'
+      preLoaderRoute: typeof AktualnosciRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/harmonogram': {
+      id: '/harmonogram'
+      path: '/harmonogram'
+      fullPath: '/harmonogram'
+      preLoaderRoute: typeof HarmonogramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/o-nas': {
+      id: '/o-nas'
+      path: '/o-nas'
+      fullPath: '/o-nas'
+      preLoaderRoute: typeof ONasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trenerzy': {
+      id: '/trenerzy'
+      path: '/trenerzy'
+      fullPath: '/trenerzy'
+      preLoaderRoute: typeof TrenerzyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AktualnosciRoute: AktualnosciRoute,
+  HarmonogramRoute: HarmonogramRoute,
+  ONasRoute: ONasRoute,
+  TrenerzyRoute: TrenerzyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
