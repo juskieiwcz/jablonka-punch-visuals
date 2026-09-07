@@ -33,14 +33,14 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-5 xl:flex">
+        <nav className="hidden items-center gap-4 xl:flex">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
               activeProps={{ className: "text-accent" }}
-              className="text-sm font-medium uppercase tracking-wide text-primary transition-colors hover:text-accent"
+              className="whitespace-nowrap text-xs font-semibold uppercase tracking-wide text-primary transition-colors hover:text-accent"
             >
               {item.label}
             </Link>
