@@ -32,7 +32,7 @@ function Harmonogram() {
             <div key={dzien} className="rounded-sm bg-card p-6">
               <h2 className="text-xl text-primary">{dzien}</h2>
               <ul className="mt-4 space-y-4">
-                {harmonogram[dzien].map((z) => (
+                {(harmonogram[dzien] ?? []).map((z) => (
                   <li key={z.godzina} className="border-t border-border pt-4">
                     <p className="font-display text-sm text-accent">{z.godzina}</p>
                     <p className="text-base">{z.grupa}</p>

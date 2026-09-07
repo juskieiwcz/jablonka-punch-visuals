@@ -123,7 +123,7 @@ function Index() {
             <div key={dzien} className="rounded-sm bg-card p-5">
               <p className="font-display text-lg text-primary">{dzien}</p>
               <ul className="mt-3 space-y-3">
-                {harmonogram[dzien].map((z) => (
+                {(harmonogram[dzien] ?? []).map((z) => (
                   <li key={z.godzina} className="border-t border-border pt-3 text-sm">
                     <span className="font-semibold text-accent">{z.godzina}</span>
                     <span className="block">{z.grupa}</span>

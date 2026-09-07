@@ -23,7 +23,7 @@ function Trenerzy() {
       <PageHero
         tytul="Trenerzy"
         opis="Pięcioro trenerów, którzy prowadzą wszystkie grupy — od pierwszej rozgrzewki po narożnik na turnieju."
-        zdjecie={trenerzy[0].zdjecie}
+        zdjecie={trenerzy[0]?.zdjecie}
       />
 
       <Section>

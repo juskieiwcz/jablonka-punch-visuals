@@ -24,7 +24,7 @@ function GaleriaSlaw() {
       <PageHero
         tytul="Galeria sław"
         opis="Zawodniczki i zawodnicy, którzy przywieźli do Jabłonny medale."
-        zdjecie={slawy[0].zdjecie}
+        zdjecie={slawy[0]?.zdjecie}
       />
 
       <Section>
