@@ -82,7 +82,7 @@ export function PageHero({
 }: {
   tytul: string;
   opis: string;
-  zdjecie?: string;
+  zdjecie?: string | undefined;
 }) {
   return (
     <header className="relative overflow-hidden border-b border-border bg-sand-deep">
