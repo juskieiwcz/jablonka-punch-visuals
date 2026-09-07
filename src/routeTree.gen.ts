@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AktualnosciRouteImport } from './routes/aktualnosci'
+import { Route as GaleriaRouteImport } from './routes/galeria'
+import { Route as GaleriaSlawRouteImport } from './routes/galeria-slaw'
+import { Route as HarmonogramRouteImport } from './routes/harmonogram'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as ONasRouteImport } from './routes/o-nas'
+import { Route as SkladkiRouteImport } from './routes/skladki'
+import { Route as TrenerzyRouteImport } from './routes/trenerzy'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AktualnosciRoute = AktualnosciRouteImport.update({
+  id: '/aktualnosci',
+  path: '/aktualnosci',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GaleriaRoute = GaleriaRouteImport.update({
+  id: '/galeria',
+  path: '/galeria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GaleriaSlawRoute = GaleriaSlawRouteImport.update({
+  id: '/galeria-slaw',
+  path: '/galeria-slaw',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HarmonogramRoute = HarmonogramRouteImport.update({
+  id: '/harmonogram',
+  path: '/harmonogram',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ONasRoute = ONasRouteImport.update({
+  id: '/o-nas',
+  path: '/o-nas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SkladkiRoute = SkladkiRouteImport.update({
+  id: '/skladki',
+  path: '/skladki',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrenerzyRoute = TrenerzyRouteImport.update({
+  id: '/trenerzy',
+  path: '/trenerzy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aktualnosci': typeof AktualnosciRoute
+  '/galeria': typeof GaleriaRoute
+  '/galeria-slaw': typeof GaleriaSlawRoute
+  '/harmonogram': typeof HarmonogramRoute
+  '/kontakt': typeof KontaktRoute
+  '/o-nas': typeof ONasRoute
+  '/skladki': typeof SkladkiRoute
+  '/trenerzy': typeof TrenerzyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aktualnosci': typeof AktualnosciRoute
+  '/galeria': typeof GaleriaRoute
+  '/galeria-slaw': typeof GaleriaSlawRoute
+  '/harmonogram': typeof HarmonogramRoute
+  '/kontakt': typeof KontaktRoute
+  '/o-nas': typeof ONasRoute
+  '/skladki': typeof SkladkiRoute
+  '/trenerzy': typeof TrenerzyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aktualnosci': typeof AktualnosciRoute
+  '/galeria': typeof GaleriaRoute
+  '/galeria-slaw': typeof GaleriaSlawRoute
+  '/harmonogram': typeof HarmonogramRoute
+  '/kontakt': typeof KontaktRoute
+  '/o-nas': typeof ONasRoute
+  '/skladki': typeof SkladkiRoute
+  '/trenerzy': typeof TrenerzyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aktualnosci'
+    | '/galeria'
+    | '/galeria-slaw'
+    | '/harmonogram'
+    | '/kontakt'
+    | '/o-nas'
+    | '/skladki'
+    | '/trenerzy'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aktualnosci'
+    | '/galeria'
+    | '/galeria-slaw'
+    | '/harmonogram'
+    | '/kontakt'
+    | '/o-nas'
+    | '/skladki'
+    | '/trenerzy'
+  id:
+    | '__root__'
+    | '/'
+    | '/aktualnosci'
+    | '/galeria'
+    | '/galeria-slaw'
+    | '/harmonogram'
+    | '/kontakt'
+    | '/o-nas'
+    | '/skladki'
+    | '/trenerzy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AktualnosciRoute: typeof AktualnosciRoute
+  GaleriaRoute: typeof GaleriaRoute
+  GaleriaSlawRoute: typeof GaleriaSlawRoute
+  HarmonogramRoute: typeof HarmonogramRoute
+  KontaktRoute: typeof KontaktRoute
+  ONasRoute: typeof ONasRoute
+  SkladkiRoute: typeof SkladkiRoute
+  TrenerzyRoute: typeof TrenerzyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aktualnosci': {
+      id: '/aktualnosci'
+      path: '/aktualnosci'
+      fullPath: '/aktualnosci'
+      preLoaderRoute: typeof AktualnosciRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galeria': {
+      id: '/galeria'
+      path: '/galeria'
+      fullPath: '/galeria'
+      preLoaderRoute: typeof GaleriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galeria-slaw': {
+      id: '/galeria-slaw'
+      path: '/galeria-slaw'
+      fullPath: '/galeria-slaw'
+      preLoaderRoute: typeof GaleriaSlawRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/harmonogram': {
+      id: '/harmonogram'
+      path: '/harmonogram'
+      fullPath: '/harmonogram'
+      preLoaderRoute: typeof HarmonogramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/o-nas': {
+      id: '/o-nas'
+      path: '/o-nas'
+      fullPath: '/o-nas'
+      preLoaderRoute: typeof ONasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/skladki': {
+      id: '/skladki'
+      path: '/skladki'
+      fullPath: '/skladki'
+      preLoaderRoute: typeof SkladkiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trenerzy': {
+      id: '/trenerzy'
+      path: '/trenerzy'
+      fullPath: '/trenerzy'
+      preLoaderRoute: typeof TrenerzyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AktualnosciRoute: AktualnosciRoute,
+  GaleriaRoute: GaleriaRoute,
+  GaleriaSlawRoute: GaleriaSlawRoute,
+  HarmonogramRoute: HarmonogramRoute,
+  KontaktRoute: KontaktRoute,
+  ONasRoute: ONasRoute,
+  SkladkiRoute: SkladkiRoute,
+  TrenerzyRoute: TrenerzyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
