@@ -9,7 +9,6 @@ import gRodzinna from "@/assets/group-rodzinna.jpg";
 import t1 from "@/assets/trener-1.jpg";
 import t2 from "@/assets/trener-2.jpg";
 import t3 from "@/assets/trener-3.jpg";
-import t4 from "@/assets/trener-4.jpg";
 import t5 from "@/assets/trener-5.jpg";
 import s1 from "@/assets/slawa-1.jpg";
 import s2 from "@/assets/slawa-2.jpg";
@@ -92,13 +91,6 @@ export const trenerzy = [
     zdjecie: t3,
     opis:
       "Tekst przykładowy. Wieloletnie doświadczenie w boksie amatorskim i pracy z dorosłymi.",
-  },
-  {
-    imie: "A. Witkowski",
-    rola: "Trener",
-    zdjecie: t4,
-    opis:
-      "Tekst przykładowy. Prowadzi zajęcia dla dzieci — od rozgrzewki po pierwsze sparingi.",
   },
   {
     imie: "A. Kado",
