@@ -139,7 +139,7 @@ function Index() {
       <Section tone="deep">
         <SectionTitle
           nadtytul="Sukcesy"
-          akcja={<CzytajWiecej to="/galeria-slaw">Wszyscy medaliści</CzytajWiecej>}
+          akcja={<CzytajWiecej to="/galeria">Wszyscy medaliści</CzytajWiecej>}
         >
           Galeria sław
         </SectionTitle>

@@ -10,7 +10,6 @@ const nav = [
   { to: "/harmonogram", label: "Harmonogram" },
   { to: "/aktualnosci", label: "Aktualności" },
   { to: "/galeria", label: "Galeria" },
-  { to: "/galeria-slaw", label: "Galeria sław" },
   { to: "/skladki", label: "Składki" },
   { to: "/kontakt", label: "Kontakt" },
 ];

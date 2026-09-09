@@ -44,7 +44,6 @@ export function Footer() {
           <Link to="/harmonogram" className="hover:text-accent">Harmonogram</Link>
           <Link to="/aktualnosci" className="hover:text-accent">Aktualności</Link>
           <Link to="/galeria" className="hover:text-accent">Galeria</Link>
-          <Link to="/galeria-slaw" className="hover:text-accent">Galeria sław</Link>
           <Link to="/skladki" className="hover:text-accent">Składki</Link>
           <Link to="/kontakt" className="hover:text-accent">Kontakt</Link>
         </nav>
