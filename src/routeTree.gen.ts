@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AktualnosciRouteImport } from './routes/aktualnosci'
 import { Route as GaleriaRouteImport } from './routes/galeria'
-import { Route as GaleriaSlawRouteImport } from './routes/galeria-slaw'
 import { Route as HarmonogramRouteImport } from './routes/harmonogram'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ONasRouteImport } from './routes/o-nas'
@@ -32,11 +31,6 @@ const AktualnosciRoute = AktualnosciRouteImport.update({
 const GaleriaRoute = GaleriaRouteImport.update({
   id: '/galeria',
   path: '/galeria',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GaleriaSlawRoute = GaleriaSlawRouteImport.update({
-  id: '/galeria-slaw',
-  path: '/galeria-slaw',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HarmonogramRoute = HarmonogramRouteImport.update({
@@ -69,7 +63,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aktualnosci': typeof AktualnosciRoute
   '/galeria': typeof GaleriaRoute
-  '/galeria-slaw': typeof GaleriaSlawRoute
   '/harmonogram': typeof HarmonogramRoute
   '/kontakt': typeof KontaktRoute
   '/o-nas': typeof ONasRoute
@@ -80,7 +73,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aktualnosci': typeof AktualnosciRoute
   '/galeria': typeof GaleriaRoute
-  '/galeria-slaw': typeof GaleriaSlawRoute
   '/harmonogram': typeof HarmonogramRoute
   '/kontakt': typeof KontaktRoute
   '/o-nas': typeof ONasRoute
@@ -92,7 +84,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/aktualnosci': typeof AktualnosciRoute
   '/galeria': typeof GaleriaRoute
-  '/galeria-slaw': typeof GaleriaSlawRoute
   '/harmonogram': typeof HarmonogramRoute
   '/kontakt': typeof KontaktRoute
   '/o-nas': typeof ONasRoute
@@ -105,7 +96,6 @@ export interface FileRouteTypes {
     | '/'
     | '/aktualnosci'
     | '/galeria'
-    | '/galeria-slaw'
     | '/harmonogram'
     | '/kontakt'
     | '/o-nas'
@@ -116,7 +106,6 @@ export interface FileRouteTypes {
     | '/'
     | '/aktualnosci'
     | '/galeria'
-    | '/galeria-slaw'
     | '/harmonogram'
     | '/kontakt'
     | '/o-nas'
@@ -127,7 +116,6 @@ export interface FileRouteTypes {
     | '/'
     | '/aktualnosci'
     | '/galeria'
-    | '/galeria-slaw'
     | '/harmonogram'
     | '/kontakt'
     | '/o-nas'
@@ -139,7 +127,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AktualnosciRoute: typeof AktualnosciRoute
   GaleriaRoute: typeof GaleriaRoute
-  GaleriaSlawRoute: typeof GaleriaSlawRoute
   HarmonogramRoute: typeof HarmonogramRoute
   KontaktRoute: typeof KontaktRoute
   ONasRoute: typeof ONasRoute
@@ -168,13 +155,6 @@ declare module '@tanstack/react-router' {
       path: '/galeria'
       fullPath: '/galeria'
       preLoaderRoute: typeof GaleriaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/galeria-slaw': {
-      id: '/galeria-slaw'
-      path: '/galeria-slaw'
-      fullPath: '/galeria-slaw'
-      preLoaderRoute: typeof GaleriaSlawRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/harmonogram': {
@@ -219,7 +199,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AktualnosciRoute: AktualnosciRoute,
   GaleriaRoute: GaleriaRoute,
-  GaleriaSlawRoute: GaleriaSlawRoute,
   HarmonogramRoute: HarmonogramRoute,
   KontaktRoute: KontaktRoute,
   ONasRoute: ONasRoute,

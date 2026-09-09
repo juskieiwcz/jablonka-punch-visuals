@@ -20,15 +20,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span
-            aria-hidden
-            className="grid h-10 w-10 place-items-center rounded-sm bg-primary font-display text-sm text-primary-foreground"
-          >
-            AB
-          </span>
-          <span className="font-display text-lg leading-none text-primary sm:text-xl">
-            Aligancki Boks
+        <Link to="/" aria-label="Aligancki Boks — strona główna" onClick={() => setOpen(false)}>
+          {/* Miejsce na logo klubu: pozioma zielona wersja PNG/SVG bez tła.
+              Podmień poniższy placeholder na <img src={logo} alt="Aligancki Boks" /> */}
+          <span className="flex h-10 w-44 items-center justify-center border border-dashed border-primary/50 px-2 font-display text-[10px] uppercase tracking-[0.2em] text-primary/70 sm:h-12 sm:w-56">
+            Logo klubu
           </span>
         </Link>
 
