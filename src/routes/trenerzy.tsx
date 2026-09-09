@@ -27,7 +27,7 @@ function Trenerzy() {
       />
 
       <Section>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {trenerzy.map((t) => (
             <article key={t.imie} className="rounded-sm bg-card">
               <img
