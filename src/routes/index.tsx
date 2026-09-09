@@ -136,6 +136,31 @@ function Index() {
         </div>
       </Section>
 
+      <Section tone="sand">
+        <SectionTitle
+          nadtytul="Kadra"
+          akcja={<CzytajWiecej to="/trenerzy">Poznaj trenerów</CzytajWiecej>}
+        >
+          Trenerzy
+        </SectionTitle>
+        <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
+          {trenerzy.map((t) => (
+            <article key={t.imie}>
+              <img
+                src={t.zdjecie}
+                alt={t.imie}
+                width={800}
+                height={1000}
+                loading="lazy"
+                className="aspect-[4/5] w-full rounded-sm object-cover"
+              />
+              <h3 className="mt-4 text-lg text-primary">{t.imie}</h3>
+              <p className="text-sm text-muted-foreground">{t.rola}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
       <Section tone="deep">
         <SectionTitle
           nadtytul="Sukcesy"
