@@ -8,6 +8,7 @@ import {
   images,
   kontakt,
   slawy,
+  trenerzy,
 } from "@/data/klub";
 import { Karuzela } from "@/components/site/Karuzela";
 import { CzytajWiecej, Section, SectionTitle, ZapiszSie } from "@/components/site/ui";
